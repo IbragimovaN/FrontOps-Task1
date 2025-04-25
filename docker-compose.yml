@@ -1,0 +1,15 @@
+services:
+  server2:
+    image: stasya1/task1-server2
+    build:
+      dockerfile: "second-server.dockerfile"
+    ports:
+      - "3001:3001"
+  server1:
+    image: stasya1/task1-server1
+    build:
+      dockerfile: "dockerfile"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server2
