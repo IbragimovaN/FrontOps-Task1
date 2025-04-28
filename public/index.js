@@ -3,7 +3,7 @@ const dataField = document.getElementById("data-field");
 
 let data = "";
 btn.addEventListener("click", () => {
-  fetch("http://localhost:3001/")
+  fetch("http://87.228.79.211:3001/")
     .then((response) => response.json())
     .then((data) => {
       dataField.textContent = data.message;
